@@ -13,6 +13,7 @@ import {
 // rotas
 import { Link } from 'react-router-dom';
 // icons
+import AppShortcutIcon from '@mui/icons-material/AppShortcut';
 import EmailIcon from '@mui/icons-material/Email';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
@@ -33,18 +34,18 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 //rotas
 const itemList = [
   {
-    text: "Home",
+    text: "Inicio",
     icon: <HomeIcon />,
     to: "/"
   },
   {
-    text: "About",
+    text: "Crudos",
     icon: <InfoIcon />,
     to: "/about"
   },
   {
-    text: "Contact",
-    icon: <EmailIcon />,
+    text: "NoMarkApp",
+    icon: <AppShortcutIcon />,
     to: "/contact"
   }
 ];

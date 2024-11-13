@@ -1,254 +1,203 @@
-import React from 'react'
-import {  
-    Grid, 
-    Typography,
-    IconButton,
-    Card,
-    CardContent,
-} from "@mui/material";
-// icons
-import SportsGymnasticsIcon from '@mui/icons-material/SportsGymnastics';
-import LocalParkingIcon from '@mui/icons-material/LocalParking';
-import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
-import FastfoodOutlinedIcon from '@mui/icons-material/FastfoodOutlined';
-import PoolOutlinedIcon from '@mui/icons-material/PoolOutlined';
-import WifiPasswordIcon from '@mui/icons-material/WifiPassword';
+import React from 'react';
+import { Typography, Card, CardContent, Box } from '@mui/material';
 // components
-import Title from './Title'
-import Paragraph from './Paragraph'
-
+import Title from './Title';
+import Paragraph from './Paragraph';
+import bannerImage from '../assets/bannercrudos.jpg'; // Ruta de la imagen del banner
 
 const Content = () => {
-  return (    
-        <Grid container spacing={0}   
+  return (
+    <React.Fragment>
+      {/* Banner de la parte superior */}
+      <Box
         sx={{
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center',
-            py: 10,
-            px: 2,
+          width: '100%',
+          height: '300px',
+          backgroundImage: `url(${bannerImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
+      />
+      
+      {/* Contenido principal */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          py: 10,
+          px: 2,
+        }}
+      >
+        <Title text={'Nuestros Crudos son la estrella del show'} textAlign={'start'} />
+        <Typography
+          variant='h6'
+          component='h4'
+          sx={{
+            fontWeight: '400',
+            paddingTop: 1,
+          }}
         >
-            <Grid item xs={12} sm={12} md={5}
-            component = 'section'
-            >
-                <Title
-                text={
-                    'What we are offering?'
-                }
-                textAlign={'start'}
-                />
+          
+        </Typography>
+        <Paragraph
+          text={
+            'Nuestros tenis crudos son la base perfecta para cualquier estilo, ofreciendo una versatilidad que se adapta a diversas preferencias. Con su diseño clásico y minimalista, estos tenis son ideales para aquellos que aprecian la simplicidad, pero también son perfectos para quienes buscan algo único. Están listos para cualquier ocasión, ya sea un look casual diario o un toque especial para un evento único.Lo mejor de todo es que, con la Nomark App, tienes la oportunidad de personalizar tus tenis de acuerdo a tu estilo y personalidad. La app te permite elegir entre una variedad de opciones de colores, materiales y detalles, brindándote la libertad de diseñar un par de tenis completamente único. Desde la elección de los tonos que más te representan hasta la adición de elementos que reflejan tu creatividad, Nomark App convierte la experiencia de compra en un proceso emocionante y completamente a tu medida.Así, nuestros tenis no solo se ajustan a lo esencial, sino que también se convierten en una extensión de tu identidad, permitiéndote tener un producto que realmente te pertenece. Ya sea que busques algo sencillo o una obra personalizada, Nomark tiene la base perfecta para comenzar tu propio diseño y destacar tu individualidad.'
+          }
+          maxWidth={'75%'}
+          mx={0}
+          textAlign={'start'}
+        />
 
-                <Typography 
-                variant='h6'
-                component='h4' 
-                sx = {{
-                    fontWeight: '400',
-                    paddingTop: 1,
-                }}
-                >
-                    Property facilities
-                </Typography>
-
-                <Paragraph 
-                text={
-                    ' We have more 5000 reviews\
-                    and our customers trust on out quality\
-                    product and trust own our product.'
-                }
-                maxWidth = {'75%'}
-                mx={0}
-                textAlign={'start'}
-                />
-            </Grid>
-            
-            <Grid item xs={12} sm={6} md={3}>
-                <Card 
-                square={ true }
-                sx={{
-                    minHeight: 200,
-                    display: 'flex',
-                    flexDirection:'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                    border: '1px solid #ccc',
-                }}>
-                    <CardContent>
-                        <IconButton>
-                            <SportsGymnasticsIcon 
-                            fontSize="large"
-                            color="secondary" />
-                        </IconButton>
-                        <Typography 
-                        variant="h5" 
-                        component="p"
-                        sx={{
-                            fontWeight: 700,
-                            textTransform: 'capitalize',
-                        }}
-                        >
-                        gym
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3}>
-                <Card 
-                square={ true }
-                sx={{ 
-                    minHeight: 200,
-                    display: 'flex',
-                    flexDirection:'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center', 
-                    border: '1px solid #ccc'
-                }}>
-                    <CardContent>
-                        <IconButton>
-                            <LocalParkingIcon 
-                            fontSize="large"
-                            color="secondary" />
-                        </IconButton>
-                        <Typography 
-                        variant="h5" 
-                        component="p"
-                        sx={{
-                            fontWeight: 700,
-                            textTransform: 'capitalize',
-                        }}
-                        >
-                        parking
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={2}
+        {/* Cards para las facilidades del producto */}
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: 2,
+            mt: 5,
+          }}
+        >
+          <Card
+            square={true}
             sx={{
-                display: {xs: 'none', sm: 'block'},
-            }}  
-            >
-                <Card 
-                square={ true }
-                sx={{ 
-                    boxShadow: 'none',
-                    minHeight: 180,
-                    display: 'flex',
-                    flexDirection:'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                }}>
-                    <CardContent>
-                        <ArrowCircleRightRoundedIcon
-                        fontSize="large"
-                        color="secondary" />
-                    </CardContent>
-                </Card>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3}>    
-                <Card 
-                square={ true }
-                sx={{ 
-                    minHeight: 200,
-                    display: 'flex',
-                    flexDirection:'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center', 
-                    border: '1px solid #ccc'
-                }}>
-                    <CardContent>
-                        <IconButton>
-                            <FastfoodOutlinedIcon
-                            fontSize="large"
-                            color="secondary" />
-                        </IconButton>
-                        <Typography 
-                        variant="h5" 
-                        component="p"
-                        sx={{
-                            fontWeight: 700,
-                            textTransform: 'capitalize',
-                        }}
-                        >
-                        local dining
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid>
-
-            <Grid item xs={12} sm={6} md={3}>
-                <Card 
-                square={ true }
-                sx={{ 
-                    minHeight: 200,
-                    display: 'flex',
-                    flexDirection:'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',                    
-                    border: '1px solid #ccc',
+              minHeight: 200,
+              width: '250px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              border: '1px solid #ccc',
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h5"
+                component="p"
+                sx={{
+                  fontWeight: 700,
+                  textTransform: 'capitalize',
                 }}
-                >
-                    <CardContent>
-                        <IconButton>
-                            <PoolOutlinedIcon 
-                            fontSize="large"
-                            color="secondary" />
-                        </IconButton>
-                        <Typography 
-                        variant="h5" 
-                        component="p"
-                        sx={{
-                            fontWeight: 700,
-                            textTransform: 'capitalize',
-                        }}
-                        >
-                        swimming pool
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid>
+              >
+                ECONÓMICOS
+              </Typography>
+            </CardContent>
+          </Card>
 
-            <Grid item xs={12} sm={6} md={3}>
-                <Card 
-                square={ true }
-                sx={{ 
-                    minHeight: 200,
-                    display: 'flex',
-                    flexDirection:'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center', 
-                    border: '1px solid #ccc',
-                }}>
-                    <CardContent>
-                        <IconButton>
-                            <WifiPasswordIcon
-                            fontSize="large"
-                            color="secondary" />
-                        </IconButton>
-                        <Typography 
-                        variant="h5" 
-                        component="p"
-                        sx={{
-                            fontWeight: 700,
-                            textTransform: 'capitalize',
-                        }}
-                        >
-                        Internet
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Grid> 
-        </Grid>
-    );
-}
+          <Card
+            square={true}
+            sx={{
+              minHeight: 200,
+              width: '250px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              border: '1px solid #ccc',
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h5"
+                component="p"
+                sx={{
+                  fontWeight: 700,
+                  textTransform: 'capitalize',
+                }}
+              >
+                ELEGANTES
+              </Typography>
+            </CardContent>
+          </Card>
 
-export default Content
+          <Card
+            square={true}
+            sx={{
+              minHeight: 200,
+              width: '250px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              border: '1px solid #ccc',
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h5"
+                component="p"
+                sx={{
+                  fontWeight: 700,
+                  textTransform: 'capitalize',
+                }}
+              >
+                PERSONALIZABLES
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Card
+            square={true}
+            sx={{
+              minHeight: 200,
+              width: '250px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              border: '1px solid #ccc',
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h5"
+                component="p"
+                sx={{
+                  fontWeight: 700,
+                  textTransform: 'capitalize',
+                }}
+              >
+                MINIMALISTAS
+              </Typography>
+            </CardContent>
+          </Card>
+
+          <Card
+            square={true}
+            sx={{
+              minHeight: 200,
+              width: '250px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              border: '1px solid #ccc',
+            }}
+          >
+            <CardContent>
+              <Typography
+                variant="h5"
+                component="p"
+                sx={{
+                  fontWeight: 700,
+                  textTransform: 'capitalize',
+                }}
+              >
+                CÓMODOS
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+      </Box>
+    </React.Fragment>
+  );
+};
+
+export default Content;

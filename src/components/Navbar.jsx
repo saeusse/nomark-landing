@@ -14,7 +14,7 @@ import {
 import DrawerItem from './DrawerItem';
 // rotas
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo.png'
 
 // personalizacao
 const StyledToolbar = styled(Toolbar) ({
@@ -32,19 +32,18 @@ const ListMenu = styled(List)(({ theme }) => ({
 //rotas
 const itemList = [
     {
-      text: "Home",
+      text: "Inicio",
       to: "/" 
     },
     {
-      text: "About",
+      text: "Crudos",
       to: "/about"
     },
     {
-        text: "Contact",
+        text: "NoMarkApp",
         to: "/contact"
     }
 ];
-
 
 const Navbar = () => {
     
@@ -53,18 +52,26 @@ const Navbar = () => {
         component="nav" 
         position="sticky"
         sx={{ 
-            backgroundColor: 'orange', 
+            backgroundColor: 'black', 
         }}
         elevation={0}
         >
             <StyledToolbar>
-                <Typography
-                variant="h6"
-                component="h2"
-
+                <img 
+                    src={logo} 
+                    alt={logo}
+                    style={{
+                        maxWidth: '64px',
+                        aspectRatio: '1/1',
+                    }}
+                />
+                {/* <Typography
+                    variant="h6"
+                    component="h2"
                 >
-                    HBSales
-                </Typography>
+                    No Mark
+                </Typography> */}
+
                 <Box sx={{display: { xs: 'block', sm: 'none' } }}>
                     <DrawerItem /> 
                 </Box>
@@ -78,7 +85,7 @@ const Navbar = () => {
                                     color: '#fff',
                                     "&:hover": {
                                         backgroundColor: 'transparent',
-                                        color: '#1e2a5a',
+                                        color: '#fa2dc3',
                                     }
                                 }}
                                 >

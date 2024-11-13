@@ -7,8 +7,8 @@ import {
 } from '@mui/material'
 import Title from './Title'
 // img
-import imgDetail from '../assets/pexels-alex-staudinger-1732414.jpg';
-import imgDetail2 from '../assets/pexels-pixabay-271816.jpg';
+import imgDetail from '../assets/img_1.jpg';
+import imgDetail2 from '../assets/img_2.jpg';
 
 
 const GetStarted = () => {
@@ -47,14 +47,14 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'We make it easy for tenants and landlords'
+                        '¡La Marca sos VOS!'
                     }
                     textAlign={'start'}
                     />
                     <CustomTypography>
-                        Listing are updated continuously so you<br />
-                        won't miss out on homes that just hit<br />
-                        market until you find your perfect home.
+                    En NoMark, el estilo lo definís vos.<br />
+                    Adquiere los Crudos en su versión original y clásica<br />
+                    o llevá tu creatividad a otro nivel personalizándolos.
                     </CustomTypography> 
                 </Box>
 
@@ -92,14 +92,16 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'Match with the best agent'
+                        '¿Qué es NoMark?'
                         
                     }
                     textAlign={'start'}
                     />
                     <CustomTypography>
-                        Our verified partner Agents are local experts who<br /> 
-                        earn an average of 4.8/5 stars from buyers and sellers.
+                    Somos más que una marca; somos una plataforma. <br />
+                    Con NoMark, tenés la libertad de comprar los Crudos o <br />
+                    personalizarlos a tu gusto, creando un producto único <br />
+                    como vos. 
                     </CustomTypography>
                 </Box>
             </CustomGridItem>
