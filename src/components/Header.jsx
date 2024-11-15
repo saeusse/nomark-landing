@@ -66,6 +66,7 @@ const Header = () => {
                 <Box>
                     <Button
                         variant='contained'
+                        onClick={()=>console.log("Hola mundo se actualizo")}
                         sx={{
                             mr: 2,
                             px: 4,
